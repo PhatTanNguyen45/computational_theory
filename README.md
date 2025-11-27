@@ -52,7 +52,7 @@ Then open `problems.ipynb` — every cell runs out-of-the-box with detailed expl
 ├── .gitignore                      # Clean Python + Jupyter setup
 ```
 
-Key Features
+## Key Features
 
 - 100% compliant with FIPS 180-4
 - Uses only numpy.uint32 → no integer overflow bugs
@@ -61,7 +61,7 @@ Key Features
 - Professional structure, clean code, meaningful commits
 - Hyperlinked references with context (as required)
 
-References
+## References
 
 - NIST FIPS PUB 180-4 – Secure Hash Standard (SHS)
   https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
