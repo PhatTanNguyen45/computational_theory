@@ -82,7 +82,8 @@ This entire project is based on official cryptographic standards and academic so
   The authoritative specification that defines all SHA-256 operations, constants, and procedures implemented in this project. Specifically:
   - **Section 4.1.2**: Defines the seven logical functions implemented in Problem 1
   - **Section 4.2.2**: Specifies the 64 constants K₀–K₆₃ derived from cube roots of primes (Problem 2)
-  - **Section 5.1.1 & 5.2.1**: Message padding specifications (Problem 3)
+  - **Section 5.1.1**: Message padding algorithm with deterministic length encoding (Problem 3)
+  - **Section 5.2.1**: Message parsing into 512-bit blocks for processing (Problem 3)
   - **Section 6.2.2**: SHA-256 compression function (Problem 4)
 
 ### Supporting References  
