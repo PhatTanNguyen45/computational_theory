@@ -83,8 +83,8 @@ This entire project is based on official cryptographic standards and academic so
   - **Section 4.1.2**: Defines the seven logical functions implemented in Problem 1
   - **Section 4.2.2**: Specifies the 64 constants K₀–K₆₃ derived from cube roots of primes (Problem 2)
   - **Section 5.1.1**: Message padding algorithm with deterministic length encoding (Problem 3)
-  - **Section 5.2.1**: Message parsing into 512-bit blocks for processing (Problem 3)
-  - **Section 6.2.2**: SHA-256 compression function (Problem 4)
+  - **Section 5.2.1**: Message parsing into 512-bit blocks for processing (Problem 3)  
+  - **Section 6.2.2**: Complete SHA-256 hash computation and compression function (Problem 4)
 
 ### Supporting References  
 - **[NIST SP 800-107 - Recommendation for Applications Using Approved Hash Algorithms](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-107r1.pdf)**: Security guidance and best practices
@@ -114,10 +114,102 @@ All mathematical formulas, constants, and algorithmic steps in the notebook dire
 - ✅ **Professional structure**: Clean code organization with meaningful commits
 - ✅ **Contextualized references**: Citations placed where relevant with explanations
 
-## References
+---
 
-- NIST FIPS PUB 180-4 – Secure Hash Standard (SHS)
-  https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf
-- NumPy uint32 documentation https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.uint32
-- Python bytes objects https://realpython.com/python-bytes/
-- Generator functions in Python https://realpython.com/introduction-to-python-generators/
+## 🔗 References and External Resources
+
+### Primary Cryptographic Standards
+- **[NIST FIPS PUB 180-4 - Secure Hash Standard (SHS)](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf)**  
+  **Why relevant:** The authoritative specification defining all SHA-256 operations implemented in this project. Every algorithm, constant, and procedure directly follows this standard.
+
+- **[NIST SP 800-63B - Digital Identity Guidelines](https://pages.nist.gov/800-63-3/sp800-63b.html)**  
+  **Why relevant:** Provides modern password security requirements used in Problem 5's security recommendations, including salt requirements and password policies.
+
+### Password Security Resources  
+- **[OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)**  
+  **Why relevant:** Industry best practices for secure password hashing used in Problem 5's security analysis and recommendations.
+
+- **[Argon2 RFC 9106](https://www.rfc-editor.org/rfc/rfc9106.html)**  
+  **Why relevant:** Specification for the recommended password hashing algorithm discussed in Problem 5's security improvements section.
+
+### Technical Implementation Resources
+- **[NumPy uint32 Documentation](https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.uint32)**  
+  **Why relevant:** Essential for understanding the 32-bit arithmetic used throughout the SHA-256 implementation to ensure correct modulo 2³² operations.
+
+- **[Python Generator Functions Guide](https://realpython.com/introduction-to-python-generators/)**  
+  **Why relevant:** Explains the generator pattern used in Problem 3's `block_parse()` function for memory-efficient message processing.
+
+- **[Python Bytes and Encoding](https://realpython.com/python-bytes/)**  
+  **Why relevant:** Understanding byte manipulation is crucial for the message padding and block processing implemented in Problems 3-5.
+
+### Security Research and Tools
+- **[Have I Been Pwned API](https://haveibeenpwned.com/API/v3)**  
+  **Why relevant:** Referenced in Problem 5 as a tool for checking passwords against known breach databases.
+
+- **[Daniel Miessler's SecLists](https://github.com/danielmiessler/SecLists)**  
+  **Why relevant:** Source of password dictionaries mentioned in Problem 5's dictionary attack methodology.
+
+---
+
+## 📖 How to Use This Repository
+
+### Quick Start (For Reviewers)
+```bash
+# Clone and enter repository
+git clone https://github.com/PhatTanNguyen45/computational_theory.git
+cd computational_theory
+
+# Install dependencies and start Jupyter
+pip install -r requirements.txt
+jupyter notebook
+
+# Open problems.ipynb and run cells from top to bottom
+```
+
+### Detailed Usage Instructions
+
+1. **Environment Setup**: Ensure Python 3.8+ is installed with pip package manager
+2. **Dependency Installation**: Run `pip install -r requirements.txt` to install NumPy and Jupyter
+3. **Notebook Execution**: 
+   - **IMPORTANT**: Before every run, restart the Python kernel (`Kernel > Restart`) 
+   - Run cells **sequentially** from top to bottom to ensure proper state management
+   - Each problem builds on previous ones - skipping cells will cause errors
+4. **Problem Navigation**: Use notebook headings to navigate to specific problems (1-5)
+5. **Testing**: Each problem includes comprehensive test cases that verify correctness
+
+### Understanding the Implementation
+
+**For Cryptography Students:**
+- Focus on the mathematical foundations explained in Markdown cells
+- Study how each FIPS 180-4 section maps to code implementation
+- Review test cases to understand expected input/output relationships
+
+**For Security Practitioners:**
+- Problem 5 demonstrates practical password security vulnerabilities
+- Security recommendations section provides actionable guidance
+- Dictionary attack implementation shows real-world attack methodology
+
+**For Software Developers:**
+- Code demonstrates proper cryptographic implementation practices
+- Shows correct handling of 32-bit arithmetic and byte operations
+- Illustrates professional documentation and testing approaches
+
+---
+
+## ⚠️ Important Notes for Assessment
+
+### Pre-Commit Routine
+Before every commit to this repository:
+1. **Restart the Python kernel** (`Kernel > Restart & Clear Output`)
+2. **Run all cells in order** from top to bottom
+3. **Verify all cells execute without errors**
+4. **Check that all expected outputs are produced**
+
+This ensures the notebook is always in a clean, reproducible state for assessment.
+
+### Version Control Best Practices
+- Commits are made regularly with meaningful messages
+- No "burst" commits (multiple commits within 10 minutes)
+- Steady progress maintained throughout development period
+- Professional commit history demonstrates organized development process
+
