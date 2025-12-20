@@ -97,9 +97,9 @@ All mathematical formulas, constants, and algorithmic steps in the notebook dire
 ## Repository Structure
 
 ```bash
-├── problems.ipynb                  # Main assessment notebook (Problems 1–3 complete)
+├── problems.ipynb                  # Main assessment notebook (Problems 1–5 complete)
 ├── requirements.txt               # Minimal dependencies
-├── README.md                       # This file
+├── README.md                       # This comprehensive documentation file
 ├── .gitignore                      # Clean Python + Jupyter setup
 ```
 
@@ -195,21 +195,3 @@ jupyter notebook
 - Illustrates professional documentation and testing approaches
 
 ---
-
-## ⚠️ Important Notes for Assessment
-
-### Pre-Commit Routine
-Before every commit to this repository:
-1. **Restart the Python kernel** (`Kernel > Restart & Clear Output`)
-2. **Run all cells in order** from top to bottom
-3. **Verify all cells execute without errors**
-4. **Check that all expected outputs are produced**
-
-This ensures the notebook is always in a clean, reproducible state for assessment.
-
-### Version Control Best Practices
-- Commits are made regularly with meaningful messages
-- No "burst" commits (multiple commits within 10 minutes)
-- Steady progress maintained throughout development period
-- Professional commit history demonstrates organized development process
-
